@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>J.A.R.V.I.S. | MARK XXI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500;700&family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #00f3ff;   /* Neon Cyan */
+            --secondary: #bc13fe; /* Neon Purple */
+            --alert: #ff0055;     /* Alert Red */
+            --bg: #050505;
+            --glass: rgba(0, 20, 30, 0.6);
+            --border: rgba(0, 243, 255, 0.3);
+        }
+
+        body {
+            background-color: var(--bg);
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(0, 50, 60, 0.4) 0%, transparent 70%),
+                linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,20,30,1) 100%);
+            color: var(--primary);
+            font-family: 'Rajdhani', sans-serif;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 300px 1fr 300px;
+            grid-template-rows: 60px 1fr 100px;
+            gap: 15px;
+            padding: 10px;
+            user-select: none;
+            position: relative;
+        }
+
+        /* --- SCANLINE EFFECT --- */
+        body::after {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 2;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+
+        /* --- GLOBAL HUD STYLES --- */
+        .panel {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.05);
+            display: flex; flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .panel::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            opacity: 0.5;
+        }
+
+        h3 {
+            margin: 0 0 15px 0;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 14px;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.7);
+            border-bottom: 1px solid rgba(0, 243, 255, 0.2);
+            padding-bottom: 5px;
+            flex-shrink: 0;
+        }
+
+        /* --- HEADER --- */
+        .header {
+            grid-column: 1 / 4;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0 30px; border-bottom: 1px solid var(--border);
+            background: rgba(0,0,0,0.5); z-index: 10;
+        }
+        .brand { font-family: 'Orbitron'; font-size: 24px; font-weight: 700; letter-spacing: 4px; text-shadow: 0 0 10px var(--primary); }
+        .clock { font-family: 'Share Tech Mono'; font-size: 20px; color: #fff; }
+
+        /* --- LEFT PANEL --- */
+        .left-panel { grid-column: 1; grid-row: 2; height: 100%; box-sizing: border-box; }
+        .chat-box {
+            flex: 1; overflow-y: auto; padding-right: 10px;
+            display: flex; flex-direction: column; gap: 10px;
+            font-family: 'Share Tech Mono', monospace; font-size: 13px;
+            min-height: 0; height: 0;
+        }
+        .chat-box::-webkit-scrollbar { width: 6px; }
+        .chat-box::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
+        .msg { padding: 8px 12px; border-radius: 4px; max-width: 90%; line-height: 1.4; animation: slideIn 0.3s ease; word-wrap: break-word; }
+        .ai { background: rgba(0, 243, 255, 0.1); border-left: 3px solid var(--primary); align-self: flex-start; color: #fff; }
+        .user { background: rgba(188, 19, 254, 0.1); border-right: 3px solid var(--secondary); align-self: flex-end; text-align: right; color: #e0e0e0; }
+        .log { color: var(--primary); opacity: 0.7; font-size: 11px; font-style: italic; border: none; padding: 2px 5px; }
+
+        /* --- CENTER PANEL (REACTOR + CHESS) --- */
+        .center-panel {
+            grid-column: 2; grid-row: 2;
+            display: flex; flex-direction: column;
+            justify-content: center; align-items: center; position: relative;
+        }
+
+        /* DEFAULT: ARC REACTOR */
+        .arc-reactor {
+            width: 280px; height: 280px; border-radius: 50%; position: relative;
+            display: flex; justify-content: center; align-items: center;
+            box-shadow: 0 0 50px rgba(0, 243, 255, 0.2);
+        }
+        .core { width: 100px; height: 100px; background: radial-gradient(circle, #fff 0%, var(--primary) 60%, transparent 100%); border-radius: 50%; box-shadow: 0 0 60px var(--primary); z-index: 10; }
+        .ring { position: absolute; border-radius: 50%; border: 2px solid transparent; border-top: 2px solid var(--primary); border-bottom: 2px solid var(--primary); animation: spin 6s linear infinite; opacity: 0.8; }
+        .r1 { width: 140px; height: 140px; border-left: 2px solid var(--primary); animation-duration: 4s; }
+        .r2 { width: 200px; height: 200px; border-right: 2px dashed var(--primary); animation-duration: 10s; animation-direction: reverse; opacity: 0.4; }
+        .r3 { width: 260px; height: 260px; border: 1px dotted var(--primary); animation-duration: 20s; opacity: 0.3; }
+
+        /* MODE: CHESS BOARD */
+        .chess-container {
+            display: none; /* Hidden by default */
+            width: 320px; height: 320px;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+            border: 2px solid var(--primary);
+            box-shadow: 0 0 30px var(--primary);
+            background: rgba(0,0,0,0.8);
+        }
+        .chess-square {
+            display: flex; justify-content: center; align-items: center;
+            font-size: 24px; position: relative;
+        }
+        .white-sq { background: rgba(0, 243, 255, 0.15); }
+        .black-sq { background: rgba(0, 20, 30, 0.9); }
+        .piece { font-size: 28px; text-shadow: 0 0 5px #fff; cursor: pointer; }
+
+        /* TOGGLE STATES */
+        .mode-chess .arc-reactor { display: none; }
+        .mode-chess .chess-container { display: grid; }
+        .mode-chess #status { margin-top: 20px; }
+
+        .status-badge {
+            margin-top: 40px; padding: 5px 20px; border: 1px solid var(--primary);
+            background: rgba(0, 243, 255, 0.1); font-family: 'Orbitron'; letter-spacing: 3px; font-size: 14px;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.2); z-index: 10;
+        }
+
+        /* --- RIGHT PANEL --- */
+        .right-panel { grid-column: 3; grid-row: 2; display: flex; flex-direction: column; gap: 15px; }
+        .stat-card-wrap { width: 100%; }
+        .stat-card { background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); padding: 10px; display: flex; justify-content: space-between; align-items: center; }
+        .stat-label { font-size: 12px; color: #888; }
+        .stat-val { font-family: 'Share Tech Mono'; font-size: 18px; color: #fff; }
+        .bar-container { height: 4px; background: #333; margin-top: 5px; width: 100%; position: relative; }
+        .bar-fill { height: 100%; background: var(--primary); width: 0%; transition: width 0.5s; box-shadow: 0 0 10px var(--primary); }
+
+        /* --- BOTTOM INPUT --- */
+        .bottom-bar { grid-column: 1 / 4; grid-row: 3; display: flex; justify-content: center; align-items: center; gap: 20px; z-index: 10; }
+        input { width: 50%; background: rgba(0,0,0,0.6); border: 1px solid var(--border); padding: 15px 25px; color: #fff; font-family: 'Share Tech Mono'; font-size: 16px; border-radius: 30px; outline: none; transition: 0.3s; }
+        input:focus { border-color: var(--primary); box-shadow: 0 0 15px rgba(0, 243, 255, 0.3); }
+        .mic-btn { width: 60px; height: 60px; border-radius: 50%; background: rgba(0,0,0,0.6); border: 2px solid var(--primary); color: var(--primary); font-size: 24px; cursor: pointer; transition: 0.3s; display: flex; align-items: center; justify-content: center; }
+        .mic-btn:hover { background: var(--primary); color: #000; box-shadow: 0 0 30px var(--primary); }
+
+        /* LISTENING STATE */
+        .listening .core { background: radial-gradient(circle, #fff, var(--alert)); box-shadow: 0 0 60px var(--alert); }
+        .listening .ring { border-color: var(--alert); }
+        .listening .mic-btn { border-color: var(--alert); color: var(--alert); box-shadow: 0 0 20px var(--alert); }
+
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        @keyframes slideIn { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: translateX(0); } }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="brand">J.A.R.V.I.S. <span style="font-size:12px; opacity:0.6;">MARK XXI</span></div>
+        <div class="clock" id="clock">00:00:00</div>
+    </div>
+
+    <div class="panel left-panel">
+        <h3>COMMUNICATION LOG</h3>
+        <div class="chat-box" id="chatWindow">
+            </div>
+    </div>
+
+    <div class="center-panel" id="centerPanel">
+        
+        <div class="arc-reactor" id="reactor">
+            <div class="core"></div>
+            <div class="ring r1"></div>
+            <div class="ring r2"></div>
+            <div class="ring r3"></div>
+        </div>
+
+        <div class="chess-container" id="chessBoard">
+            </div>
+
+        <div class="status-badge" id="status">INITIALIZING</div>
+    </div>
+
+    <div class="panel right-panel">
+        <h3>SYSTEM DIAGNOSTICS</h3>
+        
+        <div class="stat-card-wrap">
+            <div class="stat-card">
+                <span class="stat-label">CPU LOAD</span>
+                <span class="stat-val" id="cpu">0%</span>
+            </div>
+            <div class="bar-container"><div class="bar-fill" id="cpu-bar"></div></div>
+        </div>
+
+        <div class="stat-card-wrap">
+            <div class="stat-card">
+                <span class="stat-label">MEMORY</span>
+                <span class="stat-val" id="ram">0%</span>
+            </div>
+            <div class="bar-container"><div class="bar-fill" id="ram-bar"></div></div>
+        </div>
+
+        <div class="stat-card">
+            <span class="stat-label">ENV</span>
+            <span class="stat-val" style="font-size:14px;" id="weather">SCANNING</span>
+        </div>
+        
+        <div class="stat-card">
+            <span class="stat-label">MOOD</span>
+            <span class="stat-val" style="font-size:14px;" id="mood-display">NEUTRAL</span>
+        </div>
+    </div>
+
+    <div class="bottom-bar">
+        <input type="text" id="commandInput" placeholder="Enter override command..." autofocus>
+        <button class="mic-btn" id="micBtn">🎤</button>
+    </div>
+
+    <audio id="snd-start" src="sounds/startup.mp3"></audio>
+    <audio id="snd-listen" src="sounds/listening.mp3"></audio>
+    <audio id="snd-success" src="sounds/success.mp3"></audio>
+
+    <script src="renderer.js"></script>
+    <script>
+        setInterval(() => {
+            document.getElementById('clock').innerText = new Date().toLocaleTimeString();
+        }, 1000);
+    </script>
+</body>
+</html>

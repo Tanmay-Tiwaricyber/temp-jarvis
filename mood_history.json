@@ -1,0 +1,410 @@
+[
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T06:18:03.335Z",
+    "mood": "sad",
+    "trigger": "Is screen pe kya problem hai?"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T06:26:11.479Z",
+    "mood": "neutral",
+    "trigger": "Mera goal kya hai"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T06:32:21.071Z",
+    "mood": "neutral",
+    "trigger": "Jarvis hindi me baat karo."
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T06:36:58.351Z",
+    "mood": "neutral",
+    "trigger": "minimize all"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T06:37:19.535Z",
+    "mood": "neutral",
+    "trigger": "minimize all windows"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T06:37:31.486Z",
+    "mood": "neutral",
+    "trigger": "switch window"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T06:37:55.167Z",
+    "mood": "neutral",
+    "trigger": "tell me cpu usage"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T06:43:29.071Z",
+    "mood": "sad",
+    "trigger": "open spotify and play NO BATIDÃO song"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T06:45:03.463Z",
+    "mood": "neutral",
+    "trigger": "write start triangle pattern in python"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T06:49:20.777Z",
+    "mood": "angry",
+    "trigger": "i am angry"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T06:54:53.839Z",
+    "mood": "neutral",
+    "trigger": "write code for palindrome number in python "
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T06:55:43.601Z",
+    "mood": "neutral",
+    "trigger": "open spotify and play pal pal song"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T06:56:11.980Z",
+    "mood": "neutral",
+    "trigger": "open spotify and search pal pal song and play it"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T06:57:48.910Z",
+    "mood": "neutral",
+    "trigger": "lock pc"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T07:03:35.314Z",
+    "mood": "neutral",
+    "trigger": "open spotify and search pal pal song and play it"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T07:04:22.168Z",
+    "mood": "neutral",
+    "trigger": "open spotify and search pal pal song "
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T07:14:52.407Z",
+    "mood": "sad",
+    "trigger": "Aaj thoda dimag heavy lag raha hai…"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T07:16:31.991Z",
+    "mood": "neutral",
+    "trigger": "Jarvis, mujhe roz subah 7 baje padhna hota hai."
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T07:17:10.127Z",
+    "mood": "sad",
+    "trigger": "Kal main thoda stressed tha."
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T07:20:03.952Z",
+    "mood": "sad",
+    "trigger": "Mujhe thoda headache ho raha hai."
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T07:20:44.568Z",
+    "mood": "neutral",
+    "trigger": "Jarvis, tum mujhe kitna samajhte ho?"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T07:25:47.472Z",
+    "mood": "neutral",
+    "trigger": "Jarvis, tum mujhe kitna samajhte ho?"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T07:29:28.991Z",
+    "mood": "neutral",
+    "trigger": "Jarvis, tum mujhe kitna samajhte ho?"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T07:31:22.200Z",
+    "mood": "neutral",
+    "trigger": "Jarvis, tum mujhe kitna samajhte ho?"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T07:32:14.102Z",
+    "mood": "neutral",
+    "trigger": "lock pc"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T07:32:25.605Z",
+    "mood": "neutral",
+    "trigger": "take screenshot"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T07:43:29.127Z",
+    "mood": "neutral",
+    "trigger": "tell me weather of kanpur"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T07:44:24.408Z",
+    "mood": "neutral",
+    "trigger": "tell me weather"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T07:44:53.327Z",
+    "mood": "neutral",
+    "trigger": "tell me weather"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T07:45:06.022Z",
+    "mood": "neutral",
+    "trigger": "tell me time"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T07:45:40.839Z",
+    "mood": "neutral",
+    "trigger": "tell me todays time"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T07:46:00.783Z",
+    "mood": "neutral",
+    "trigger": "increase volume"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T07:46:57.481Z",
+    "mood": "neutral",
+    "trigger": "tell me cpu usage"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T07:47:17.579Z",
+    "mood": "neutral",
+    "trigger": "tell me system usage"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T08:11:56.975Z",
+    "mood": "neutral",
+    "trigger": "play chess"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T08:12:15.060Z",
+    "mood": "neutral",
+    "trigger": "move b3"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T08:13:27.243Z",
+    "mood": "neutral",
+    "trigger": "close"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T08:13:40.349Z",
+    "mood": "sad",
+    "trigger": "stop chess"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T08:13:47.308Z",
+    "mood": "sad",
+    "trigger": "stop"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T08:15:21.047Z",
+    "mood": "neutral",
+    "trigger": "play chess"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T08:15:28.205Z",
+    "mood": "neutral",
+    "trigger": "close chess"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T08:15:34.325Z",
+    "mood": "sad",
+    "trigger": "stop chess"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T14:49:44.916Z",
+    "mood": "neutral",
+    "trigger": "play chess"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T14:50:04.451Z",
+    "mood": "neutral",
+    "trigger": "move e3"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T14:50:10.691Z",
+    "mood": "neutral",
+    "trigger": "move e3"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T14:50:15.683Z",
+    "mood": "neutral",
+    "trigger": "move e4"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T14:50:24.619Z",
+    "mood": "neutral",
+    "trigger": "move e5"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T14:50:39.461Z",
+    "mood": "sad",
+    "trigger": "stop chess"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T14:50:52.803Z",
+    "mood": "neutral",
+    "trigger": "play pal pal song on spotify"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T14:51:30.251Z",
+    "mood": "neutral",
+    "trigger": "open spotify and play pal pal song"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T14:52:17.284Z",
+    "mood": "neutral",
+    "trigger": "open notepad and write about types of economics "
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T14:52:29.078Z",
+    "mood": "neutral",
+    "trigger": "onomics"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T14:52:48.381Z",
+    "mood": "neutral",
+    "trigger": "write about types of economics"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T14:53:12.035Z",
+    "mood": "neutral",
+    "trigger": "write aboout types of economics in notepad"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T14:53:29.483Z",
+    "mood": "neutral",
+    "trigger": "write about types of economics in notes.txt"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T14:56:29.254Z",
+    "mood": "neutral",
+    "trigger": "jarvis open notepad and write about types of economics"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T14:56:41.064Z",
+    "mood": "neutral",
+    "trigger": "onomics"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T15:01:37.286Z",
+    "mood": "neutral",
+    "trigger": "jarvis open notepad and write about types of economics"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T15:02:09.156Z",
+    "mood": "neutral",
+    "trigger": "jarvis open notepad and write about types of economics"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T15:04:11.139Z",
+    "mood": "neutral",
+    "trigger": "jarvis open notepad and write about types of economics"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T15:05:43.628Z",
+    "mood": "neutral",
+    "trigger": "write a python 2 number addition code"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T15:06:14.619Z",
+    "mood": "neutral",
+    "trigger": "open vscode and write 2 number addition code"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T15:07:15.772Z",
+    "mood": "neutral",
+    "trigger": "jarvis open notepad and write about types of economics"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T15:08:09.992Z",
+    "mood": "neutral",
+    "trigger": " sktoo pc"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T15:08:59.162Z",
+    "mood": "neutral",
+    "trigger": "jarvis open notepad and write about topic in english - types of economics "
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T15:16:17.029Z",
+    "mood": "neutral",
+    "trigger": "open vs code and write 2 number addition program"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T15:19:21.970Z",
+    "mood": "neutral",
+    "trigger": "open vs code and write hello world program in python"
+  },
+  {
+    "date": "2025-12-27",
+    "timestamp": "2025-12-27T15:34:10.851Z",
+    "mood": "neutral",
+    "trigger": "Jarvis, open VS Code and write a hello world python script."
+  }
+]

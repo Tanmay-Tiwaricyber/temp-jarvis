@@ -1,0 +1,12 @@
+{
+  "todos": [
+    "Jarvis,  buy groceries."
+  ],
+  "schedule": [],
+  "alarms": [
+    {
+      "time": "11:38",
+      "active": true
+    }
+  ]
+}
